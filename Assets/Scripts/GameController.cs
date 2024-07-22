@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f; // Retoma o jogo
-        SceneManager.LoadScene(mainMenuSceneName);
+        SceneManager.LoadScene(0);
     }
 }
 
