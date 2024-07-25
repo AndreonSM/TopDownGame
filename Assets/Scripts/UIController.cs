@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
     {
         screenList.ForEach(screen =>
         {
-            if(screen.active == true)
+            if(screen.activeSelf == true)
             {
                 currentScreen = screen;
             }

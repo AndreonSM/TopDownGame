@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 30;
-    public int currentHealth;
+    public int maxHealth = 50;
+    public float currentHealth;
+    public PlayerHUD playerHUD;
 
     void Start()
     {
@@ -13,6 +14,8 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth = Mathf.Max(currentHealth - damage, 0);
+        playerHUD.healthBar.fillAmount = currentHealth / maxHealth;
+
         if (currentHealth == 0)
         {
             Die();

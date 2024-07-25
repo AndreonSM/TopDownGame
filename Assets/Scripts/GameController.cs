@@ -7,8 +7,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject gameOverScreen;
-    public Text gameOverText;
-    public string mainMenuSceneName = "MainMenu";
+    public string mainMenuSceneName = "Menu";
 
     void Awake()
     {
@@ -58,7 +57,6 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 0f; // Pausa o jogo
         gameOverScreen.SetActive(true);
-        gameOverText.text = "Game Over XD"; // Personalize a mensagem conforme necessário
     }
 
     public void RestartGame()
@@ -70,7 +68,7 @@ public class GameController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f; // Retoma o jogo
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }
 

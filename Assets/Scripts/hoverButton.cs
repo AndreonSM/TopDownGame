@@ -5,29 +5,28 @@ using UnityEngine.EventSystems;
 
 public class hoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private GameObject cursor;
+    public GameObject cursor;
+    private RectTransform cursorTransform;
 
+    private void Awake()
+    {
+        cursorTransform = cursor.GetComponent<RectTransform>();
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        cursor.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, gameObject.GetComponent<RectTransform>().anchoredPosition.y-210);
-        cursor.SetActive(true);
+        if (!cursor.activeSelf)
+        {
+            cursor.SetActive(true);
+            cursorTransform.anchoredPosition = new Vector2(0f, gameObject.GetComponent<RectTransform>().anchoredPosition.y - 210);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        cursor.SetActive(false);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (cursor.activeSelf)
+        {
+            cursor.SetActive(false);
+        }
     }
 }
