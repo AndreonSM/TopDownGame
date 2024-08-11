@@ -7426,7 +7426,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7100005, y: 3.0200002, z: -10}
+  m_LocalPosition: {x: -3.9104664, y: 3.0184798, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7655,6 +7655,7 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 0
   healthPercent: 0
+  coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
 --- !u!114 &529239197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14625,6 +14626,7 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   healthPercent: 0
+  coinSpawnObject: {fileID: 0}
 --- !u!1 &1461348976
 GameObject:
   m_ObjectHideFlags: 0

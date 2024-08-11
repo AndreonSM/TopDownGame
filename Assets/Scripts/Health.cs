@@ -5,6 +5,8 @@ public class Health : MonoBehaviour
     public int maxHealth = 50;
     public float currentHealth;
     public float healthPercent;
+    public GameObject coinSpawnObject;
+
 
     void Start()
     {
@@ -44,6 +46,7 @@ public class Health : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            Instantiate(coinSpawnObject, gameObject.transform.position, gameObject.transform.rotation);
         }
     }
 
