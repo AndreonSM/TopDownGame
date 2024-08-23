@@ -7,28 +7,45 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject gameOverScreen;
+    
     public string mainMenuSceneName = "Menu";
+
 
     public Vector3 playerSpawnPosition;
 
     public float playerCurrentHealth = 50;
+    public float playerMaxHealth = 50;
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (gameOverScreen != null)
+            {
+                gameOverScreen.SetActive(false);
+                DontDestroyOnLoad(gameOverScreen);
+            }
+            else
+            {
+                Debug.Log("GameOverScreen is not assigned in the Inspector!");
+            }
+
         }
         else if (instance != this)
         {
-            Destroy(gameObject); // destruir caso tenha uma instãncia DIFERENTE!
+            Destroy(gameObject); // destruir caso tenha uma instãncia DIFERENTE
         }
+        Debug.Log(gameOverScreen);
+
     }
+
+    
 
     void Start()
     {
         // Reatribuir referências ao iniciar a cena
-        ReassignReferences();
     }
 
     void OnEnable()
@@ -45,15 +62,16 @@ public class GameController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Reatribuir referências quando uma nova cena for carregada
-        ReassignReferences();
-    }
-
-    void ReassignReferences()
-    {
-        // Busque novamente os objetos na cena
-        // gameOverScreen = GameObject.Find("GameOverCanvas");
-        // gameOverText = GameObject.Find("GameOvText").GetComponent<Text>();
+        if (gameOverScreen == null)
+        {
+            // Reassign gameOverScreen by finding it again
+            gameOverScreen = GameObject.Find("GameOverCanvas");
+            if (gameOverScreen != null)
+            {
+                DontDestroyOnLoad(gameOverScreen);
+                gameOverScreen.SetActive(false); // Hide it initially
+            }
+        }
     }
 
     public void GameOver()
@@ -65,7 +83,16 @@ public class GameController : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f; // Retoma o jogo
+
+        if (GameController.instance != null)
+        {
+            GameController.instance.playerCurrentHealth = GameController.instance.playerMaxHealth;
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        gameOverScreen.SetActive(false);
+
     }
 
     public void ReturnToMainMenu()
@@ -74,36 +101,8 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
-    // Method to set the spawn position
     public void SetPlayerSpawnPosition(Vector3 newPosition)
     {
         playerSpawnPosition = newPosition;
     }
 }
-
-    /*
-    public void RestartLevel(){
-        
-        lives--;
-        if (lives > 0) {
-            SceneManager.LoadScene(currentLevel);
-        }
-        else{
-            lives = 3;
-            currentLevel = 0;
-            SceneManager.LoadScene(currentLevel);
-        }
-    }
-
-    public void GoOnLevel(){
-        currentLevel++;
-        SceneManager.LoadScene(currentLevel);
-    }
-
-
-    public void GameOver()
-    {
-        // pegar tela de gameover
-    }
-    */
-
