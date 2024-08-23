@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: aa9f7413a4935394fbae926943fa868a
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 88e662fbfcb351747a3b5ec03b776946
+  - enabled: 1
+    path: Assets/Scenes/Sage_House.unity
+    guid: ddb32506bad0c82459dc74d6eb270187
   m_configObjects: {}

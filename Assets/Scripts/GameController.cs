@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public GameObject gameOverScreen;
     public string mainMenuSceneName = "Menu";
 
+    public Vector3 playerSpawnPosition;
+
     void Awake()
     {
         if (instance == null)
@@ -69,6 +71,12 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1f; // Retoma o jogo
         SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    // Method to set the spawn position
+    public void SetPlayerSpawnPosition(Vector3 newPosition)
+    {
+        playerSpawnPosition = newPosition;
     }
 }
 
