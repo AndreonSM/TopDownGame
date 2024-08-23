@@ -10,7 +10,14 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        if (GameController.instance != null && CompareTag("Player"))
+        {
+            currentHealth = GameController.instance.playerCurrentHealth;
+        }
+        else
+        {
+            currentHealth = maxHealth;
+        }
         healthPercent = 100f;
     }
 
@@ -18,6 +25,11 @@ public class Health : MonoBehaviour
     {
         currentHealth = Mathf.Max(currentHealth - damage, 0);
         healthPercent = currentHealth / maxHealth;
+
+        if (GameController.instance != null && CompareTag("Player"))
+        {
+            GameController.instance.playerCurrentHealth = currentHealth;
+        }
 
         if (currentHealth == 0)
         {

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 
     public Vector3 playerSpawnPosition;
 
+    public float playerCurrentHealth = 50;
     void Awake()
     {
         if (instance == null)
