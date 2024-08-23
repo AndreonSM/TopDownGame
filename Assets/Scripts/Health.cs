@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        healthPercent = 100f;
+        healthPercent = currentHealth / maxHealth;
     }
 
     public void TakeDamage(int damage)
