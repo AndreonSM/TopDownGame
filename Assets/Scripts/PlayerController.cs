@@ -1,10 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _playerRigidBody2D;
@@ -23,6 +18,10 @@ public class PlayerController : MonoBehaviour
     private bool _isKnockedBack = false;
     private Vector2 _knockbackVelocity;
 
+    public AudioClip attackSound;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +33,8 @@ public class PlayerController : MonoBehaviour
         _playerRigidBody2D.angularDrag = 10f;
 
         attackHitbox.SetActive(false); // Garantir que a hitbox comece desativada
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -137,6 +138,7 @@ public class PlayerController : MonoBehaviour
     public void ActivateHitbox()
     {
         attackHitbox.SetActive(true);
+        PlaySound(attackSound);
     }
 
     public void DeactivateHitbox()
@@ -153,6 +155,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ApplyKnockback());
 
             // Causar dano ao jogador
+            PlaySound(hitSound);
             Health playerHealth = GetComponent<Health>();
             if (playerHealth != null)
             {
@@ -168,5 +171,13 @@ public class PlayerController : MonoBehaviour
         _isKnockedBack = false;
         _knockbackVelocity = Vector2.zero;
         _playerRigidBody2D.velocity = Vector2.zero;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

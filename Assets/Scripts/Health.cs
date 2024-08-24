@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     public float healthPercent;
     public GameObject coinSpawnObject;
 
+    public AudioClip deathSound; 
+    private AudioSource _audioSource; 
 
     void Start()
     {
@@ -19,6 +21,12 @@ public class Health : MonoBehaviour
             currentHealth = maxHealth;
         }
         healthPercent = currentHealth / maxHealth;
+
+        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+        {
+            _audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     public void TakeDamage(int damage)
@@ -57,6 +65,11 @@ public class Health : MonoBehaviour
         }
         else
         {
+            if (deathSound != null && _audioSource != null)
+            {
+                _audioSource.PlayOneShot(deathSound);
+            }
+
             Destroy(gameObject);
             Instantiate(coinSpawnObject, gameObject.transform.position, gameObject.transform.rotation);
         }
