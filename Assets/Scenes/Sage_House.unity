@@ -743,6 +743,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &107770435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +758,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1014938798}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &107770436
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14460,7 +14464,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.48158035, y: 0.12702, z: -10}
+  m_LocalPosition: {x: -0.7137555, y: 0.13672006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14792,6 +14796,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &529239197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14806,6 +14811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1271197840}
+  moveSound: {fileID: 8300000, guid: 0900784f56c015747b41cb67ab7a12de, type: 3}
+  damageSound: {fileID: 8300000, guid: 5016995ba7a0fe6468a29e97338ea263, type: 3}
+  moveSoundDelay: 0.8
 --- !u!1 &565399855
 GameObject:
   m_ObjectHideFlags: 0
@@ -15410,6 +15418,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &679450319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15424,6 +15433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 2144599478}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &679450320
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -15695,6 +15707,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &705117186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15709,6 +15722,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 751216330}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &705117187
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16191,6 +16207,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &765947308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16205,6 +16222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1856006077}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &765947309
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16510,6 +16530,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &869751405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16524,6 +16545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1178667478}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &869751406
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16891,6 +16915,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &918745702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16905,6 +16930,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1031343914}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &918745703
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -19067,6 +19095,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &1295579277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19081,6 +19110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1197071089}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &1295579278
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -19346,6 +19378,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &1338482380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19360,6 +19393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 744300796}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &1338482381
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -19719,6 +19755,7 @@ GameObject:
   - component: {fileID: 1393776749}
   - component: {fileID: 1393776750}
   - component: {fileID: 1393776751}
+  - component: {fileID: 1393776752}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -19838,6 +19875,8 @@ MonoBehaviour:
   attackHitbox: {fileID: 1791269282}
   knockbackDuration: 0.4
   knockbackSpeed: 10
+  attackSound: {fileID: 8300000, guid: 9893f03ab06cc774d975bc697da68d37, type: 3}
+  hitSound: {fileID: 8300000, guid: 2bbf711534b3c784eaa636a781708914, type: 3}
 --- !u!70 &1393776749
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -19910,6 +19949,103 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 0}
+  deathSound: {fileID: 0}
+--- !u!82 &1393776752
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393776744}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9893f03ab06cc774d975bc697da68d37, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1405570368
 GameObject:
   m_ObjectHideFlags: 0
@@ -20665,6 +20801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1052415662}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!114 &1555657882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20681,6 +20820,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!70 &1555657883
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -22342,6 +22482,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 891035915}
   mainMenuSceneName: Menu
   playerSpawnPosition: {x: 0, y: 0, z: 0}
+  playerCurrentHealth: 50
+  playerMaxHealth: 50
 --- !u!4 &1871549397
 Transform:
   m_ObjectHideFlags: 0
@@ -22799,6 +22941,7 @@ MonoBehaviour:
   currentHealth: 0
   healthPercent: 0
   coinSpawnObject: {fileID: 1542050997989519526, guid: ebbfacfdc27e15843833525935328f88, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &2058429814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22813,6 +22956,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeedSlime: 3.5
   _detectionArea: {fileID: 1027163615}
+  moveSound: {fileID: 0}
+  damageSound: {fileID: 0}
+  moveSoundDelay: 0.8
 --- !u!70 &2058429815
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
